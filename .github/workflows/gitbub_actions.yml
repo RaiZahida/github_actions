@@ -1,0 +1,23 @@
+on:
+  push:
+       branches:
+               - main
+jobs:
+ install-node:
+  runs-on: ubuntu-latest
+  steps:
+   - name: update packages
+     run:  sudo apt  update
+
+   - name: install node.js
+     run:  sudo apt install -y nodejs
+
+   - name: check the version
+     run: node--v
+
+   - name: install npm package 
+     run: sudo apt install npm
+
+   - name: check npm version
+     run: npm--version
+    
